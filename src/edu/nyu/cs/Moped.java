@@ -12,6 +12,35 @@ import java.util.Arrays;
 public class Moped {
 
     /**
+     * Moped Constructor
+     * 
+     */
+    public Moped(){
+        // for the constructor is this the right way to set everythig up?
+        this.coordinates = int{5, 10};         // or should I call the setter here? 
+
+
+        for(int i = 1; i <= 10; i++){              //correct to use "this.grid" ?
+            grid[i] = i;                                                // did I set this up right?
+            for(int j = 1; j <= 200; j++){
+                grid[i][j] = j;
+            }
+        }   
+
+
+    }
+
+    // properties
+    private int[] coordinates = new int[2];
+    private char[] orientationlist = new char[]{'N','S','E','W'}; // or better to do a String "NSEW" 
+    private String orientation;
+    private int gasLevel;
+
+    private int[][] grid = new int[10][200];  //should this be private?
+
+
+
+    /**
      * Sets the orientation of the moped to a particular cardinal direction.
      * @param orientation A string representing which cardinal direction at which to set the orientation of the moped.  E.g. "north", "south", "east", or "west".
      */
