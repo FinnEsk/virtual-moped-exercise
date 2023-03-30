@@ -17,13 +17,14 @@ public class Moped {
      */
     public Moped(){
         // for the constructor is this the right way to set everythig up?
-        this.coordinates = int{5, 10};         // or should I call the setter here? 
+        int[] starterLocation = {10,5};
+        this.setLocation(starterLocation);          // or should I call the setter here? 
 
+        this.orientation = 
 
-        for(int i = 1; i <= 10; i++){              //correct to use "this.grid" ?
-            grid[i] = i;                                                // did I set this up right?
-            for(int j = 1; j <= 200; j++){
-                grid[i][j] = j;
+        for(int i = 1; i <= 1200; i++){              //correct to use "this.grid" ?                                                // did I set this up right?
+            for(int j = 1; j <= 10; j++){
+                this.grid[i][j] = j;
             }
         }   
 
@@ -31,7 +32,7 @@ public class Moped {
     }
 
     // properties
-    private int[] coordinates = new int[2];
+    private int[] location = new int[2];
     private char[] orientationlist = new char[]{'N','S','E','W'}; // or better to do a String "NSEW" 
     private String orientation;
     private int gasLevel;
@@ -173,7 +174,7 @@ public class Moped {
      * @param location an int array containing the new location at which to place the moped, in the order {street, avenue}.
      */
     public void setLocation(int[] location) {
-
+        this.location = location;
     }
 
     /**
